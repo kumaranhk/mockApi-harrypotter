@@ -1,0 +1,69 @@
+*{
+    font-size: large;
+}
+body{
+    background-image: url();
+}
+.outer{
+    width: 40vw;
+    margin: 20px;
+}
+.btn{
+    width: 100% !important;
+    margin-top: 20px;
+}
+.new-user{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.signup{
+    text-decoration: none;
+    font-size: medium;
+}
+.forgot-password{
+    text-decoration: none;
+    font-size: medium;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+.close {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+.popup-content {
+    text-align: center;
+}
+.toaster {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 300px !important;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+    display: none;
+}
