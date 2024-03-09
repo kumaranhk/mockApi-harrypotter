@@ -178,14 +178,3 @@ document.querySelector('.logIn').addEventListener('submit',(e) => {
 function changePage(pageurl){
     window.location.href = pageurl;
 }
-
-// let email = "harry@potter.com"
-// let password = "kums"
-// let payload = {
-//     email : "kums@gmail.com",
-//     password : "kums9o8o9"
-// }
-// getUser(payload.email,payload.password);
-// createUser(payload);
-// validateUser(email,password);
-// console.log(editUser(payload,2));

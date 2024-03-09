@@ -13,28 +13,24 @@
         <nav class="navbar navbar-expand">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active link-light" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active link-light" aria-current="page" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active link-light" aria-current="page" href="#">Data</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link active link-light" aria-current="page" href="#table">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active link-light" aria-current="page" href="#">Log Out</a>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
+                    <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit" onclick="search()">Search</button>
                 </form>
             </div> 
         </nav>
     </div>
-    <div class="table-outline">
+    <div class="table-outline" id="table">
         <table class="table table-striped">
             <thead>
                 <tr>
-                  <th scope="col">#</th>
                   <th scope="col">Name</th>
                   <th scope="col">House</th>
                   <th scope="col">Role</th>
@@ -44,6 +40,8 @@
             </thead>
             <tbody class="table-body"></tbody>
         </table>
+        <nav aria-label="Page navigation example" class="nav">
+        </nav>
     </div>
     <div class="overlay">
         <div class="cards carousel-container"></div>
