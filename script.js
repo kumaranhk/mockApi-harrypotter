@@ -51,11 +51,12 @@ async function editUser(payload,id){
 
 async function validateUser(userEmail,userPassword){
     try {
+        openloading('block');
         let data = await getUser();
         data.some((e) => e.email === userEmail && e.password === userPassword) ? 
-        toasterMessage("Logged in successfully",'primary') : 
-        toasterMessage("Invalid userId or password","danger");
-        changePage('./main/main.html');
+        // toasterMessage("Logged in successfully",'primary')
+        changePage('./main/main.html') : 
+        toasterMessage("Invalid userId or password","danger"),openloading('none');
     } catch (error) {
         console.log(error);
         toasterMessage("Something went wrong","danger");
@@ -176,5 +177,13 @@ document.querySelector('.logIn').addEventListener('submit',(e) => {
 });
 
 function changePage(pageurl){
-    window.location.href = pageurl;
+    toasterMessage("Logged in successfully",'primary');   
+    setTimeout(() => {
+        openloading('none');
+        window.location.href = pageurl;
+    },1000);
+}
+
+function openloading(val){
+    document.querySelector('.loading').style.display = val;
 }

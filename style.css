@@ -79,6 +79,19 @@
     z-index: 1; 
     display: none;
 }
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(156, 156, 156, 0.082);
+    z-index: 2;
+    display: none;
+}
+.spinner-border{
+    margin-top: 50vh;
+}
 @media screen and (min-width : 770px)  and (max-width : 930px){
     .outer{
         width: 55vw;
