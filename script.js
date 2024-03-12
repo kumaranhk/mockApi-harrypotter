@@ -12,7 +12,7 @@ async function getUser(){
     } 
     catch (error) {
         console.log("Error",error);
-        toasterMessage("Something went wrong","danger");
+        toasterMessage("Something went wrong !","danger");
         return null;
     }
 }
@@ -28,7 +28,7 @@ async function createUser(payload){
         });
         return res.status
     } catch (error) {
-        toasterMessage("Something went wrong","danger");
+        toasterMessage("Something went wrong !","danger");
         console.log(error);
     }
 }
@@ -44,7 +44,7 @@ async function editUser(payload,id){
         });
         return res.status;
     } catch (error) {
-        toasterMessage("Something went wrong","danger");
+        toasterMessage("Something went wrong !","danger");
         console.log(error);
     }
 }
@@ -59,7 +59,7 @@ async function validateUser(userEmail,userPassword){
         toasterMessage("Invalid userId or password","danger"),openloading('none');
     } catch (error) {
         console.log(error);
-        toasterMessage("Something went wrong","danger");
+        toasterMessage("Something went wrong !","danger");
     }
 }
 
@@ -144,11 +144,10 @@ async function submit(){
     if (clickedOption === createUser){
         try {
             let data = await getUser();
-            data.some((e) => e.email === payload.email) ? toasterMessage("Email already exists","danger") : 
-            await createUser(payload) === 201 ? toasterMessage("New User Created",'primary') : toasterMessage("Something Went wrong",'danger');
-            closePopup();
+            data.some((e) => e.email === payload.email) ? toasterMessage("Email already exists !","danger") : 
+            await createUser(payload) === 201 ? toasterMessage("New User Created",'primary') : toasterMessage("Something went wrong !",'danger');
         }catch (error){
-            toasterMessage("Something went wrong","danger");
+            toasterMessage("Something went wrong !","danger");
             console.log(error);
         }
     }
@@ -158,12 +157,11 @@ async function submit(){
             let id;
             data.some((e) => e.email === payload.email ? id = e.id : id = 0) ? 
             await editUser(payload,id) === 200 ? toasterMessage("Password changed successfully",'primary')
-            : toasterMessage("Something Went wrong",'danger') 
+            : toasterMessage("Something went wrong !",'danger') 
             : toasterMessage("Email not yet registered","danger");
-            closePopup();
             
         }catch (error){
-            toasterMessage("Something went wrong","danger");
+            toasterMessage("Something went wrong !","danger");
             console.log(error);
         }
     }

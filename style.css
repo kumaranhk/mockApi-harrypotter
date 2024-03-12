@@ -67,7 +67,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-    width: 300px !important;
+    width: 350px !important;
 }
 .overlay {
     position: fixed;

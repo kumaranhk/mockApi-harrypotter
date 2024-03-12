@@ -215,14 +215,14 @@ function openPopup() {
     document.querySelector(".popup").style.display = "block";
     document.querySelector(".table-outline").style.pointerEvents = "none";
     document.querySelector(".main").style.pointerEvents = "none";
-    document.querySelector('.overlay').style.display = 'flex';
+    // document.querySelector('.overlay').style.display = 'flex';
 }
 
 function closePopup() {
     document.querySelector(".popup").style.display = "none";
     document.querySelector(".table-outline").style.pointerEvents = "auto";
     document.querySelector(".main").style.pointerEvents = "auto";
-    document.querySelector('.overlay').style.display = 'none';
+    // document.querySelector('.overlay').style.display = 'none';
 }
 
 function logout(){
@@ -230,6 +230,10 @@ function logout(){
     setTimeout(() =>  {
         window.location.href = '../../index.html'
     },2000);
-    openloading('none');
-    toasterMessage('Successfully logged out','primary');
+    setTimeout(() =>  {
+        toasterMessage('Successfully logged out','primary');
+    },1500);
+    setTimeout(() =>  {
+        openloading('none');
+    },2000);
 }
