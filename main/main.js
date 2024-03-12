@@ -164,7 +164,6 @@ function nextButton() {
     feedData();
 }
 let logoutBuuton = document.querySelector('.logout');
-// logout.addEventListener('click', logoutPopup());
 
 function createLogoutPopup(){
     let body = document.querySelector('.logout-popup');
@@ -215,14 +214,12 @@ function openPopup() {
     document.querySelector(".popup").style.display = "block";
     document.querySelector(".table-outline").style.pointerEvents = "none";
     document.querySelector(".main").style.pointerEvents = "none";
-    // document.querySelector('.overlay').style.display = 'flex';
 }
 
 function closePopup() {
     document.querySelector(".popup").style.display = "none";
     document.querySelector(".table-outline").style.pointerEvents = "auto";
     document.querySelector(".main").style.pointerEvents = "auto";
-    // document.querySelector('.overlay').style.display = 'none';
 }
 
 function logout(){
